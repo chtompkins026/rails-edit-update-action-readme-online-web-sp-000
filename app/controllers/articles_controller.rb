@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
   
  def update
    @article = Article.find(params[:id])
-    @post.update(params.require(:article))
+    @article.update(params.require(:article))
 
     redirect_to article_path(@article)
   end
